@@ -1,0 +1,13 @@
+{
+  "name": "Assignment 5",
+  "version": "1.0.0",
+  "description": "Get and Post checker",
+  "main": "Assignment5Handlebars.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "cairnsi",
+  "license": "",
+  "dependencies": {
+  }
+}
