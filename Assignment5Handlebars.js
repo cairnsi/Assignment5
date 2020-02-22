@@ -8,22 +8,13 @@ app.set('view engine', 'handlebars');
 app.set('port', 3127);
 
 app.get('/',function(req,res){
-  res.render('home');
-});
-
-app.get('/other-page',function(req,res){
-  res.render('other-page');
-});
-
-
-function genContext(){
-  var stuffToDisplay = {};
-  stuffToDisplay.time = (new Date(Date.now())).toLocaleTimeString('en-US');
-  return stuffToDisplay;
-}
-
-app.get('/time',function(req,res){
-  res.render('time', genContext());
+  var input=[];
+  for(var item in req.query){
+	  input.push({'name':item, 'value': req.query[item]})
+  }
+  var context = {};
+  context.inputData = input;
+  res.render('GET',context);
 });
 
 app.use(function(req,res){
