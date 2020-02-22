@@ -30,7 +30,7 @@ app.post('/', function(req,res){
   for (var item in req.body){
 	  bodyData.push({'name': item, 'value': req.body[item]})
   }
-  var context = {}
+  var context = {};
   context.urlInput = urlData;
   context.bodyInput = bodyData;
   res.render('POST', context);
