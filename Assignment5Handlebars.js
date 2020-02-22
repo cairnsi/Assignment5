@@ -34,7 +34,7 @@ app.post('/', function(req,res){
   context.urlInput = urlData;
   context.bodyInput = bodyData;
   res.render('POST', context);
-}
+});
 
 app.use(function(req,res){
   res.status(404);
